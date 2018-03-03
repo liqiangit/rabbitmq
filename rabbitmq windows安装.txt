@@ -1,0 +1,34 @@
+软件下载地址
+erlang
+http://erlang.org/download/
+rabbitmq
+https://dl.bintray.com/rabbitmq/all/rabbitmq-server/
+
+安装
+http://blog.csdn.net/lu1005287365/article/details/52315786
+安装步骤（以管理员身份安装）
+1 安装erlang
+2 安装rabbitmq
+添加执行文件路径到环境变量
+D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.3\sbin
+开启web管理端
+rabbitmq-plugins enable rabbitmq_management
+启动/停止
+rabbitmq-service.bat start
+rabbitmq-service.bat stop
+访问webui
+http://localhost:15672/
+默认管理员用户名密码：guest/guest
+
+开放端口  15672 管理端口，5672 服务端口
+
+
+
+Win10 rabbitmqctl 命令报错
+官网的解决方法：
+
+    Copy the file .erlang.cookie manually from %SystemRoot% or %SystemRoot%\system32\config\systemprofile to %HOMEDRIVE%%HOMEPATH%.
+
+ 
+
+复制 C:\Windows\System32\config\systemprofile\.erlang.cookie 到 C:\Users\liqiang\.erlang.cookie
